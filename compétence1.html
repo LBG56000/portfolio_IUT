@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet">
     <title>Portfolio Léo</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -31,7 +32,8 @@
             <article>
                 <h2>Réalisation</h2>
                 <p>Pour valider cette compétence nous avons du créer un jeu de sudoku jouable dans le terminal</p>
-                <p>Ce projet a faitt appel à différentes compétences (développement d'un programme) et qualités personnelles (rigeur, ponctualité)</p>
+                <p>Ce projet a faitt appel à différentes compétences (développement d'un programme) et qualités
+                    personnelles (rigeur, ponctualité)</p>
                 <a href="">Pour voir plus en détails les compétences</a>
             </article>
             <article>
@@ -51,7 +53,8 @@
             </article>
             <article>
                 <h3>Découpage Algorithmique</h3>
-                <p>Le but était de concevoir notre Découpage Algorithmique pour faciliter son développement par la suite</p>
+                <p>Le but était de concevoir notre Découpage Algorithmique pour faciliter son développement par la suite
+                </p>
                 <figure>
                     <img src="" alt="">
                     <figcaption>Mon découpage Algorithmique</figcaption>
@@ -59,17 +62,23 @@
             </article>
             <article>
                 <h3>Développement du jeu</h3>
-                <p>Le jeu du sudoku est un jeu assez complexe qui fait appel à plusieurs compétences en programmation en langage C</p>
-                <p>Dans cette partie nous verrons les procédures et fonctions les plus importantes du code <a href="">,pour voir plus en détails</a></p>
+                <p>Le jeu du sudoku est un jeu assez complexe qui fait appel à plusieurs compétences en programmation en
+                    langage C</p>
+                <p>Dans cette partie nous verrons les procédures et fonctions les plus importantes du code <a
+                        href="">,pour voir plus en détails</a></p>
                 <h4>Le programme principal</h4>
                 <figcaption>
-                    <img src="images/main_sudoku.png" alt="Le programme principal" title="Le programme principal du sudoku">
+                    <img src="images/main_sudoku.png" alt="Le programme principal"
+                        title="Le programme principal du sudoku">
                     <figcaption>Le programme principal</figcaption>
                 </figcaption>
-                <p>Le programme principal nous permet de jouer au sudoku grace à l'enchainement des différentes fonctions et procédures</p>
+                <p>Le programme principal nous permet de jouer au sudoku grace à l'enchainement des différentes
+                    fonctions et procédures</p>
                 <h4>La fonction possible</h4>
-                <p>La fonction nous permet de savoir si une valeur peut être placée à l'endroit indiqué par l'utilisateur</p>
-                <p>Cette fonction est très immortante dans le jeu car elle permet de ne pas commettre de fautes dans la grille de sudoku</p>
+                <p>La fonction nous permet de savoir si une valeur peut être placée à l'endroit indiqué par
+                    l'utilisateur</p>
+                <p>Cette fonction est très immortante dans le jeu car elle permet de ne pas commettre de fautes dans la
+                    grille de sudoku</p>
                 <pre>
 int possible(t_Grille grille, int numLigne, int numCol, int val)
 {
@@ -118,12 +127,41 @@ int possible(t_Grille grille, int numLigne, int numCol, int val)
     return correct;
 }
                 </pre>
-                <p>L'utilisation de différentes boucles permet de parcourir toutes la grille pour voir si une occurence de la valeur n'est pas trouvée dans ce cas la fonction informe l'utilisateur</p>
-
+                <p>L'utilisation de différentes boucles permet de parcourir toutes la grille pour voir si une occurence
+                    de la valeur n'est pas trouvée dans ce cas la fonction informe l'utilisateur</p>
+                <p><a href="">Pour voir le programme plus en détails...</a></p>
+            </article>
+            <article>
+                <h4>Le cahier de tests</h4>
+                <p>Le programme étant fini il faut mainteant le tester via un cahier de tests réaliser au préalable</p>
+                <table>
+                    <tr>
+                        <th>Numero du cas</th>
+                        <th>Données de test</th>
+                        <th>Résulatats attendus</th>
+                        <th>Résultats obtenus</th>
+                        <th>Resultat du test</th>
+                    </tr>
+                    <tr>
+                        <td>Cas 1</td>
+                        <td>Grille4.sud</td>
+                        <td>chargement de la grille pas de message d’erreur</td>
+                        <td>à voir</td>
+                        <td>Oui</td>
+                    </tr>
+                </table>
+                <p>Ce document comme vous avez pu voir l'exemple permet de répertorier tous les tests que nous devions réaliser pour savoir si notre programme fonctionnait </p>
+            </article>
+            
+        </section>
+        <section>
+            <article>
+                <h3>Conclusion</h3>
             </article>
         </section>
     </main>
     <footer>
     </footer>
 </body>
+
 </html>
