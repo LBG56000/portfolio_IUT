@@ -58,8 +58,20 @@
         <section>
             <h2>Méthode du backtracking</h2>
             <article>
-                <h2></h2>
+                <p>Le backtracking vise à parcourir la grille de valeur définit comme ceci</p>
+                <code>
+                    #define N 4 <br>
+                    #define TAILLE (N * N) <br>
+                    typedef int tGrille[TAILLE][TAILLE];
+                </code>
+                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et TAILLE</p>
+                <p>S'il la valeur peut être placée il l'a place et passe à l'autre case dans le cas contraire il teste une autre valeur</p>
+                <p>Il répète la fonction tant qu'il n'arrive pas à la fin de la grille (fonction récursive)</p>
+                <p>A REVOIR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
             </article>
+        </section>
+        <section>
+            <h2>Amélioration de backtracking</h2>
         </section>
     </main>
 </body>
