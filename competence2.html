@@ -19,5 +19,48 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <h1>Le resolveur de sudoku</h1>
+        <p>Après le jeu du sudoku nous nous sommes intéréssé à résoudre le sudoku</p>
+        <ol>
+            <li>Implentation de techniques de résolution</li>
+            <li>Méthode du backtracking</li>
+            <li>Amélioration de backtracking</li>
+        </ol>
+        <p>Pour les trois techniques nous avons utilisé un tableau de structures définit comme ceci</p>
+        <code>
+            #define N 3 <br>
+            #define TAILLE N * N <br>
+            typedef struct <br>
+            { <br>
+            &nbsp;&nbsp;int valeur; <br>
+            &nbsp;&nbsp;int candidats[TAILLE]; <br>
+            &nbsp;&nbsp;int nbCandidats; <br>
+            }tCase1; <br>
+        </code>
+        <p>Nous retrouvons la valeur de la case, son nombre de candidats et ses candidats potentiels de la case</p>
+        <section>
+            <h2>Implentation de techniques de résolution</h2>
+            <article>
+                <h3>Singleton nu</h3>
+                <p>Cette technique vise à touver ou les cases n'ont qu'un seul candidat et donc à l'affecter à la case</p>
+                <figcaption>
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                </figcaption>
+                <p>Des fonctions utilitaire ont été utilisé comme ajouterCanidats, retirerCandidat ou encore nbCandidats</p>
+                <p>Ainsi elle ont été utiilisé à différentes reprises pour permettre dd'implenter les autres techniques</p>
+            </article>
+            <article>
+                <h3>Singleton caché</h3>
+            </article>
+        </section>
+        <section>
+            <h2>Méthode du backtracking</h2>
+            <article>
+                <h2></h2>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
