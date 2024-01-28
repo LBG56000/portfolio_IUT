@@ -37,21 +37,17 @@
             <article>
                 <h2>Le jeu de sudoku</h2>
                 <p>Le projet s'organisait en plusieurs livrables comme:</p>
-                <ul>
-                    <ol>Le maquettage</ol>
-                    <ol>Découpage Algorithmique</ol>
-                    <ol>Développement du jeu</ol>
-                    <ol>Cahiers de tests</ol>
-                </ul>
+                <ol>
+                    <li>Le maquettage</li>
+                    <li>Découpage Algorithmique</li>
+                    <li>Développement du jeu</li>
+                    <li>Cahiers de tests</li>
+                </ol>
             </article>
             <article>
                 <h3>Le maquettage</h3>
                 <p>L'objectif était de donner une idée sur notre futur jeu de sudoku</p>
-                <figcaption>
-                    <img src="" alt="">
-                    <figure>Ebauche de la maquette</figure>
-                </figcaption>
-                <a href="">Pour voir plus en détail ma maquette</a>
+                <iframe src="documents/BRUNEAU-GACHE_Léo_1D1.pdf" frameborder="10" width="500" height="400"></iframe>
             </article>
             <article>
                 <h3>Découpage Algorithmique</h3>
@@ -70,8 +66,64 @@
                     <img src="images/main_sudoku.png" alt="Le programme principal" title="Le programme principal du sudoku">
                     <figcaption>Le programme principal</figcaption>
                 </figcaption>
+                <p>Le programme principal nous permet de jouer au sudoku grace à l'enchainement des différentes fonctions et procédures</p>
+                <h4>La fonction possible</h4>
+                <p>La fonction nous permet de savoir si une valeur peut être placée à l'endroit indiqué par l'utilisateur</p>
+                <p>Cette fonction est très immortante dans le jeu car elle permet de ne pas commettre de fautes dans la grille de sudoku</p>
+                <pre>
+int possible(t_Grille grille, int numLigne, int numCol, int val)
+{
+    int boucleC;
+    int boucleL;
+    int correct;
+    int blocCol;
+    int blocLigne;
+    int boucleBlocLig;
+    int boucleBlocCol;
+    correct = 1;
+    boucleC = 0;
+    while(boucleC &lsaquo; NB_COL && correct == 1){
+        boucleL = 0;
+        while (boucleL &lsaquo; NB_LIGNE && correct ==1)
+        {
+            if (grille[numLigne][boucleC] == val)
+            {
+                printf("La valeur %d est presente sur la ligne %d\n",val,numLigne+1);
+                correct = 0;
+            }
+            if (grille[boucleL][numCol] == val)
+            {
+                printf("La valeur %d est presente sur la colonne %d\n",val,numCol+1);
+                correct = 0;
+            }
+            boucleL++; 
+        }
+        boucleC ++;
+    }
+    blocLigne = (numLigne / 3)*3;
+    blocCol = (numCol / 3)*3;
+    boucleBlocLig = 0;
+    boucleBlocCol =0;
+    while( boucleBlocLig &lsaquo; (NB_LIGNE/3) && correct == 1){
+        while( boucleBlocCol &lsaquo; (NB_COL/3) && correct == 1){
+            if (grille[blocLigne+boucleBlocLig][blocCol+boucleBlocCol] == val){
+                printf("La valeur %d est presente dans le bloc\n",val);
+                correct = 0;
+            }
+        boucleBlocCol++;
+        }
+    boucleBlocCol = 0;
+    boucleBlocLig++;    
+    }
+    return correct;
+}
+                </pre>
+                <p>L'utilisation de différentes boucles permet de parcourir toutes la grille pour voir si une occurence de la valeur n'est pas trouvée dans ce cas la fonction informe l'utilisateur</p>
+
             </article>
         </section>
     </main>
+    <footer>
+    </footer>
 </body>
 </html>
