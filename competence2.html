@@ -6,16 +6,17 @@
     <link href="style.css" rel="stylesheet">
     <title>Portfolio Léo | Compétence 2</title>
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="competence1.html">Compétence UE11 - Réaliser un développement d'application</a></li>
-                <li><a href="competence2.html">Compétence UE12 - Optimiser des applications informatiques</a></li>
-                <li><a href="">Compétence UE13 - Administrer des systèmes informatiques communicants</a></li>
-                <li><a href="">Compétence UE14 - Gérer des données de l'information</a></li>
-                <li><a href="">Compétence UE15 - Conduite de projet</a></li>
-                <li><a href="">Compétence UE16 - Travailler dans une équipe informatique</a></li>
+                <li><a href="competence1.html">Compétence UE11</a></li>
+                <li><a href="competence2.html">Compétence UE12</a></li>
+                <li><a href="competence3.html">Compétence UE13</a></li>
+                <li><a href="competence4.html">Compétence UE14</a></li>
+                <li><a href="competence5.html">Compétence UE15</a></li>
+                <li><a href="competence6.html">Compétence UE16</a></li>
             </ul>
         </nav>
     </header>
@@ -43,13 +44,16 @@
             <h2>Implentation de techniques de résolution</h2>
             <article>
                 <h3>Singleton nu</h3>
-                <p>Cette technique vise à touver ou les cases n'ont qu'un seul candidat et donc à l'affecter à la case</p>
+                <p>Cette technique vise à touver ou les cases n'ont qu'un seul candidat et donc à l'affecter à la case
+                </p>
                 <figcaption>
                     <img src="" alt="">
                     <figcaption></figcaption>
                 </figcaption>
-                <p>Des fonctions utilitaire ont été utilisé comme ajouterCanidats, retirerCandidat ou encore nbCandidats</p>
-                <p>Ainsi elle ont été utiilisé à différentes reprises pour permettre dd'implenter les autres techniques</p>
+                <p>Des fonctions utilitaire ont été utilisé comme ajouterCanidats, retirerCandidat ou encore nbCandidats
+                </p>
+                <p>Ainsi elle ont été utiilisé à différentes reprises pour permettre dd'implenter les autres techniques
+                </p>
             </article>
             <article>
                 <h3>Singleton caché</h3>
@@ -64,15 +68,45 @@
                     #define TAILLE (N * N) <br>
                     typedef int tGrille[TAILLE][TAILLE];
                 </code>
-                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et TAILLE</p>
-                <p>S'il la valeur peut être placée il l'a place et passe à l'autre case dans le cas contraire il teste une autre valeur</p>
+                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et
+                    TAILLE</p>
+                <p>S'il la valeur peut être placée il l'a place et passe à l'autre case dans le cas contraire il teste
+                    une autre valeur</p>
                 <p>Il répète la fonction tant qu'il n'arrive pas à la fin de la grille (fonction récursive)</p>
                 <p>A REVOIR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
             </article>
         </section>
         <section>
             <h2>Amélioration de backtracking</h2>
+            <article>
+                <p>La méthode de backtracking est une superbe méthode mais l'inconvénient majeur est sa lenteur</p>
+                <p>En effet, la fonction s'appelle par elle même à chaque nouvelle case et teste à nouveau toutes les
+                    possibilités</p>
+                <p>Nous avons donc opté pour une nouvelle vison, face à certaines difficultées rencontrées nous avons
+                    donc opté pour un ordre de passage </p>
+                <p>Ainsi en utilisant toujours backtracking nous arrivons à des temps encourageant comme vous pouvez le
+                    constater.</p>
+                <iframe src="documents/BRUNEAU-GACHE_LAINE_Temps_execution_grilles_V2.pdf" frameborder="0"></iframe>
+                <p>Nous avons utilisé une structure différentes pour réailiser cette méthode.</p>
+                <code>
+                    typedef coordonnee ordre[TAILLE * TAILLE] ; <br>
+                    typedef struct{ <br>
+                    &nbsp;&nbsp;int i ; <br>
+                    &nbsp;&nbsp;int j ; <br>
+                    &nbsp;&nbsp;int val ; <br>
+                    } coordonnee;
+                </code>
+                <p>Cette structure est appelée dans la nouvelle version de backtracking. Ainsi il appelera dans un
+                    premier temps les cases ayant le moins de candidats posible ce qui augmenetra la rapidité de
+                    backtracking</p>
+            </article>
+        </section>
+        <section>
+            <h1>Conclusion</h1>
+            <p>La méthode de backtracking nous a apporté de la créativité dans la façcon de voir conceptualiser les choses.</p>
+            <p>A REVOIR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
         </section>
     </main>
 </body>
+
 </html>
