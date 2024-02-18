@@ -1,10 +1,29 @@
 body{
-    background-color: #FAFAFA  ;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202021 ;
+    font-family: 'latobold';
     margin: 1.5em 3em ;
+    color: white;
+}
+
+main{
+    margin: 0 15em;
 }
 h1{
     text-align: center;
+}
+
+h2{
+    border-bottom: 2px solid rgb(26, 26, 224);
+}
+
+a{
+    text-decoration: none;
+    color: yellow;
+}
+
+li>a:hover{
+    background-color: blue;
+    color: white;
 }
 
 nav>ul{
@@ -14,8 +33,14 @@ nav>ul{
     justify-content: space-around;
 }
 
-
-
+nav{
+    position: static;
+    top: 0;
+    
+}
+nav>li>a{
+    color: aqua;
+}
 td,th,tr{
 
     border: 2px black solid;
@@ -25,4 +50,23 @@ td,th,tr{
     display: flex;
     flex-direction: row;
 }
+#moi{
+    display: flex;
+    flex-direction: row;
+}
+li{
+    text-decoration: none;
+}
+figcaption{
+    text-align: center;
+}
+@font-face {
+    /**Paragraphe*/
 
+    font-family: 'latobold';
+    src: url(polices/LatoBold/lato-bold-webfont.woff2) format('woff2'),
+        url(polices/LatoBold/lato-bold-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
