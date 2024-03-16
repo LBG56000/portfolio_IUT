@@ -23,7 +23,7 @@
     </header>
     <main>
         <h1>Le resolveur de sudoku</h1>
-        <p>Après le jeu du sudoku nous nous sommes intéréssé à résoudre le sudoku</p>
+        <p>Après le jeu du sudoku nous nous sommes intéréssé à résoudre différentes grille de ce jeu sudoku</p>
         <ol>
             <li>Implentation de techniques de résolution</li>
             <li>Méthode du backtracking</li>
@@ -47,17 +47,10 @@
                 <h3>Singleton nu</h3>
                 <p>Cette technique vise à touver ou les cases n'ont qu'un seul candidat et donc à l'affecter à la case
                 </p>
-                <figcaption>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                </figcaption>
                 <p>Des fonctions utilitaire ont été utilisé comme ajouterCanidats, retirerCandidat ou encore nbCandidats
                 </p>
-                <p>Ainsi elle ont été utiilisé à différentes reprises pour permettre dd'implenter les autres techniques
+                <p>Ainsi elles ont été utiilisé à différentes reprises pour permettre d'implémenter les autres techniques
                 </p>
-            </article>
-            <article>
-                <h3>Singleton caché</h3>
             </article>
         </section>
         <section>
@@ -69,12 +62,12 @@
                     #define TAILLE (N * N) <br>
                     typedef int tGrille[TAILLE][TAILLE];
                 </code>
-                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et
+                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et la 
                     TAILLE</p>
                 <p>S'il la valeur peut être placée il l'a place et passe à l'autre case dans le cas contraire il teste
                     une autre valeur</p>
                 <p>Il répète la fonction tant qu'il n'arrive pas à la fin de la grille (fonction récursive)</p>
-                <p>A REVOIR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+                <p>Le backtracking s'avère rapide sur des petites grille mais une optimisation est obligatoire pour des grille de 4 * 4</p>
             </article>
         </section>
         <section>
@@ -85,7 +78,7 @@
                     possibilités</p>
                 <p>Nous avons donc opté pour une nouvelle vison, face à certaines difficultées rencontrées nous avons
                     donc opté pour un ordre de passage </p>
-                <p>Ainsi en utilisant toujours backtracking nous arrivons à des temps encourageant comme vous pouvez le
+                <p>Ainsi en utilisant toujours le backtracking nous arrivons à des temps encourageant comme vous pouvez le
                     constater.</p>
                 <iframe src="documents/BRUNEAU-GACHE_LAINE_Temps_execution_grilles_V2.pdf" frameborder="0"></iframe>
                 <p>Nous avons utilisé une structure différentes pour réailiser cette méthode.</p>
@@ -98,8 +91,8 @@
                     } coordonnee;
                 </code>
                 <p>Cette structure est appelée dans la nouvelle version de backtracking. Ainsi il appelera dans un
-                    premier temps les cases ayant le moins de candidats posible ce qui augmenetra la rapidité de
-                    backtracking</p>
+                    premier temps les cases ayant le moins de candidats posible ce qui augmenetra la rapidité de l'algorithme
+                    </p>
             </article>
         </section>
         <section>

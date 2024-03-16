@@ -68,5 +68,9 @@ figcaption{
         url(polices/LatoBold/lato-bold-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+h2{
+    position: sticky;
+    top: 0;
 }
