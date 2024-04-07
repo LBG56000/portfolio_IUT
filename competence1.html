@@ -12,148 +12,76 @@
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li><a href="competence1.html">Compétence 1</a></li>
-                <li><a href="competence2.html">Compétence 2</a></li>
-                <li><a href="competence3.html">Compétence 3</a></li>
-                <li><a href="competence4.html">Compétence 4</a></li>
-                <li><a href="competence5.html">Compétence 5</a></li>
-                <li><a href="competence6.html">Compétence 6</a></li>
+                <li><a href="competence1.html">Développement d'application</a></li>
+                <li><a href="competence2.html">Approche algorithmique</a></li>
+                <li><a href="competence3.html">Installation d'un poste</a></li>
+                <li><a href="competence4.html">Base de données</a></li>
+                <li><a href="competence5.html">Site web</a></li>
+                <li><a href="competence6.html">Environnement economique & écologique </a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Réaliser un jeu de sudoku</h1>
+        <h1>Le jeu de sudoku</h1>
+        <ul>
+            <li><a href="#maquettage">Le maquettage</a></li>
+            <li><a href="#decoup">Le découpage algorithmique</a></li>
+            <li><a href="#dev">Développement du jeu</a></li>
+            <li><a href="#tests">Cahier de tests</a></li>
+        </ul>
         <section>
             <article>
-                <h2>Compétences</h2>
-                <p>Pour valider cette compétence nous avons du créer un jeu de sudoku jouable dans le terminal</p>
-                <p>Ce projet a fait appel à différentes compétences (développement d'un programme) et qualités
-                    personnelles (rigeur, ponctualité)</p>
+                <h2>Compétences personnelles</h2>
                 <ul>
-                    <li>Ponctualité : rendre les travaux dans les temps</li>
-                    <li>Reflexion : savoir trouver des solutions aux problèmes rencontrés</li>
-                    <li>Compréhension : comprendre les consignes</li>
+                    <li>Rigueur (respecter les différentes attentes du client)</li>
+                    <li>Ponctualité (rendre les différents travaux dans les temps)</li>
                 </ul>
             </article>
             <article>
-                <h2>Le jeu de sudoku</h2>
-                <p>Le projet s'organisait en plusieurs livrables</p>
-                <ol>
-                    <li>Le maquettage</li>
-                    <li>Découpage Algorithmique</li>
-                    <li>Développement du jeu</li>
-                    <li>Cahiers de tests</li>
-                </ol>
+                <h2>Compétences techniques</h2>
+                <ul>
+                    <li>Mise en pratique de mes connaissances en langage C</li>
+                </ul>
             </article>
+        </section>
+        <section>
             <article>
-                <h3>Le maquettage</h3>
-                <p>L'objectif était de donner une idée sur notre futur jeu de sudoku</p>
-                <p>Nous devions montrer différets états du jeu, les différentes erreurs d'entrées de l'utilisateur.</p>
-                <p>Pour voir la maquette <a href="https://github.com/LBG56000/Projets_BUT_1.git">Lien GitHub</a></p>
-            </article>
-            <article>
-                <h3>Découpage Algorithmique</h3>
-                <p>Le but était de concevoir la partie algorithmique de notre jeu comment nous allions le coder par la
-                    suite et de penser aux différentes fonctions et procédures que notre programme allait avoir besoin
+                <h2 id="maquettage">Le maquettage</h2>
+                <p>Le but de cette partie était de montrer au client à quoi allait ressembler le jeu du sudoku une fois
+                    fini.
+                    A l’aide capture d’écran pour montrer les potentiels messages d’erreurs, les différentes étapes de
+                    remplissage de la grille.
                 </p>
-                <p>Rédigé en &quot;pseudo-code&quot;il nous permettait de voir le programme plus clairement. Si vous
-                    souhaitez le voir <a href="documents/BRUNEAU_GACHE_Leo_decoupae algorithmique.pdf"
-                        target="_blank">Mon découpage Algorithmique</a></p>
+                <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/Sudoku/maquette.pdf">Maquette</a>
             </article>
             <article>
-                <h3>Développement du jeu</h3>
-                <p>Le jeu du sudoku est un jeu assez complexe qui fait appel à plusieurs compétences en programmation en
-                    langage C</p>
-                <p>Dans cette partie nous verrons les procédures et fonctions les plus importantes du code <a
-                        href="">Lien vers GitHub</a></p>
-                <h4>Le programme principal</h4>
-                <figcaption>
-                    <img src="images/Semestre1/projet1/main_sudoku.png" alt="Le programme principal"
-                        title="Le programme principal du sudoku">
-                    <figcaption>Le programme principal</figcaption>
-                </figcaption>
-                <p>Le programme principal nous permet de jouer au sudoku grace à l'enchainement des différentes
-                    fonctions et procédures</p>
-                <h4>La fonction possible</h4>
-                <p>La fonction nous permet de savoir si une valeur peut être placée à l'endroit indiqué par
-                    l'utilisateur</p>
-                <p>Cette fonction est très immortante dans le jeu car elle permet de ne pas commettre de fautes dans la
-                    grille de sudoku</p>
-                <pre>
-int possible(t_Grille grille, int numLigne, int numCol, int val)
-{
-    int boucleC;
-    int boucleL;
-    int correct;
-    int blocCol;
-    int blocLigne;
-    int boucleBlocLig;
-    int boucleBlocCol;
-    correct = 1;
-    boucleC = 0;
-    while(boucleC &lsaquo; NB_COL && correct == 1){
-        boucleL = 0;
-        while (boucleL &lsaquo; NB_LIGNE && correct ==1)
-        {
-            if (grille[numLigne][boucleC] == val)
-            {
-                printf("La valeur %d est presente sur la ligne %d\n",val,numLigne+1);
-                correct = 0;
-            }
-            if (grille[boucleL][numCol] == val)
-            {
-                printf("La valeur %d est presente sur la colonne %d\n",val,numCol+1);
-                correct = 0;
-            }
-            boucleL++; 
-        }
-        boucleC ++;
-    }
-    blocLigne = (numLigne / 3)*3;
-    blocCol = (numCol / 3)*3;
-    boucleBlocLig = 0;
-    boucleBlocCol =0;
-    while( boucleBlocLig &lsaquo; (NB_LIGNE/3) && correct == 1){
-        while( boucleBlocCol &lsaquo; (NB_COL/3) && correct == 1){
-            if (grille[blocLigne+boucleBlocLig][blocCol+boucleBlocCol] == val){
-                printf("La valeur %d est presente dans le bloc\n",val);
-                correct = 0;
-            }
-        boucleBlocCol++;
-        }
-    boucleBlocCol = 0;
-    boucleBlocLig++;    
-    }
-    return correct;
-}
-                </pre>
-                <p>L'utilisation de différentes boucles permet de parcourir toute la grille pour voir si une occurence
-                    de la valeur n'est pas trouvée dans ce cas la fonction informe l'utilisateur</p>
+                <h2 id="decoup">Le découpage algorithmique</h2>
+                <p>Cette partie avait pour but de représenter mon programme principal en pseudo-code avec les appels aux
+                    différentes fonctions, procédures. Je devais aussi sans développer montrer toutes les
+                    procédures/fonctions et fonctions dont nous avions besoin. Par exemple, nous avions besoin d’une
+                    fonction de saisie qui nous permet de savoir si le caractère saisi est conforme aux différents
+                    critères que nous avons décidés au préalable.
+                </p>
+                <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/Sudoku/decoupageAlgo.pdf">Découpage algorithmique</a>
             </article>
             <article>
-                <h4>Le cahier de tests</h4>
-                <p>Le programme étant fini il faut mainteant le tester via un cahier de tests réaliser au préalable</p>
-                <table>
-                    <tr>
-                        <th>Numero de la case</th>
-                        <th>Données de test</th>
-                        <th>Résulatats attendus</th>
-                        <th>Résultats obtenus</th>
-                        <th>Resultat du test</th>
-                    </tr>
-                    <tr>
-                        <td>Cas 1</td>
-                        <td>Grille4.sud</td>
-                        <td>chargement de la grille pas de message d’erreur</td>
-                        <td>Affichage de la grille</td>
-                        <td>Oui</td>
-                    </tr>
-                </table>
-                <p>Ce document comme vous avez pu voir l'exemple permet de répertorier tous les tests que nous devions
-                    réaliser pour savoir si notre programme fonctionnait </p>
-                <a href="">Pour voir plus en détail le cahier de tests</a>
+                <h2 id="dev">Développement du jeu</h2>
+                <p>A l’aide des différentes étapes précédemment énoncées nous avons dû coder le jeu en langage C (
+                    langage imposé ) . Lors de cette partie j’ai su reprendre les différents documents et ainsi pu
+                    traduire le pseudo code en langage C. Le programme devait permettre l’ouverture du fichier saisi par
+                    l'utilisateur. Je devais afficher cette grille et ainsi lui inciter à saisir un numéro de ligne et
+                    de colonne puis une valeur pour remplir la grille au fur et à mesure.
+                    Pour chaque saisie réalisée, le programme devait lui avertir si le numéro saisi n’était pas déjà
+                    présent dans la colonne, ligne ou bloc. Pour tout les message d’erreur expliqués dans la maquette un
+                    message explicite lui était renvoyer et il pouvait de nouveau saisir une valeur valide.
+                </p>
+                <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/Sudoku/main.c">Programme</a>
             </article>
-
+            <article>
+                <h2 id="tests">Cahier de tests</h2>
+                <p>Cette partie nous a permis de rassembler tous les tests que devaient compléter notre programme pour
+                    montrer qu’il répondait aux différentes attentes du client. </p>
+            </article>
         </section>
     </main>
     <footer>
