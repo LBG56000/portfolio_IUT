@@ -36,7 +36,6 @@ nav>ul{
 nav{
     position: static;
     top: 0;
-    
 }
 nav>li>a{
     color: aqua;
@@ -78,3 +77,5 @@ h2{
 #encours{
     color: red;
 }
+
+

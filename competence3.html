@@ -10,78 +10,43 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="competence1.html">Compétence 1</a></li>
-                <li><a href="competence2.html">Compétence 2</a></li>
-                <li><a href="competence3.html">Compétence 3</a></li>
-                <li><a href="competence4.html">Compétence 4</a></li>
-                <li><a href="competence5.html">Compétence 5</a></li>
-                <li><a href="competence6.html">Compétence 6</a></li>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a>
+                    <ul class="submenu">
+                        <li><a href="#">Développement d'application</a></li>
+                        <li><a href="#">Approche algorithmique</a></li>
+                        <li><a href="#">Installation d'un poste</a></li>
+                        <li><a href="#">Base de données</a></li>
+                        <li><a href="#">Site web</a></li>
+                        <li><a href="#">Environnement economique & écologique</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Installation d'un poste pour le développement</h1>
-        <p>Ce projet consistait à organiser l'automatisation de certaines taches</p>
-        <p>Ce projet consistait à la récupération d'information depuis des programmes en langage C préalablement créé.
-            <br> Le projet était divisé en deux parties
-        </p>
-        <ol>
-            <li>La partie conceptualisation</li>
-            <li>La partie automatisation</li>
-        </ol>
         <section>
             <article>
-                <h2>La conceptualisation</h2>
-                <p>Cette partie était la pour prendre connaissance des différents rendus que nous devions fournir à la
-                    fin
-                    du projet. <br> Ainsi nous avons pu faire un liste des différentes taches qui nous attendaient </p>
-                <ul>
-                    <li>Création de trois programmes en langage C</li>
-                    <li>Création d'une documentation utiisateur.ice/technique des programmes</li>
-                </ul>
+                <h2>Conceptualisation</h2>
+                <p>Pour mener à bien ce projet nous avons dû dans un premier temps conceptualiser les différents
+                    livrables.
+                    Ainsi nous avions des programmes en langage C comme support et à construire. Les différents
+                    programmes
+                    nous ont servi à créer dans un premier temps à la main les documentation technique (en HTML) et
+                    utilisateur (en MarkDown) en HTML sur la base des différents programmes.
+                </p>
             </article>
             <article>
-                <h3>Les programmes en C</h3>
-                <p>Les créations devaient se conforter aux éxigences du client</p>
-                <p>Ils devaient respester plusieurs conditions comme le fait d'être composé de strutures</p>
-                <a href="">Lien vers les fichiers C</a>
-            </article>
-            <article>
-                <h3>Les fichiers HTLM</h3>
-                <p>Via les fichiers C nous devaons dans un premier temps faire la documentation utilisateur à la main
-                    via les commenatires que nous avions récupéré</p>
-                <a href="">Voir la documentation technique HTML</a>
-                <p>La documentation utilisateur devait expliquer notre mode de production sur les différents rendus du
-                    projet</p>
-            </article>
-        </section>
-        <section>
-            <h2>L'automatisation</h2>
-            <p>La partie principale du projet consistait à automatiser la génération des deux documentation via le
-                langage PHP </p>
-            <article>
-                <h3>PHP</h3>
-                <p>PHP est reconnu pour un langage près du développement web donc parfait pour transformer un fichier en
-                    C en HTML</p>
-                <p>En effet dans nos commentaires nous devions respecter une certainer nomenclature</p>
-                <code>
-                    montrer les différentes façon de commenter
-                </code>
-                <p>Le langage PHP nous a servit pour permettre de parcourir un fichier en langage C ou Markdown pour
-                    permettre de produire deux fichiers HTML (documentation technique et utiisateur) </p>
-                <p>Nous avons pu ainsi à travers les fichiers HTML les transformer en PDF comme convenu avec le client
-                    avec une image Docker utilisé pour l'occasion</p>
-
-            </article>
-            <article>
-                <h2>Utilisation de Docker</h2>
-                <p>La conteneurisation est utilisé pour permettre l'automatisation plus facile avec Docker. En effet une
-                    fois le programme bash permettant d'envoyer les fichiers et ainsi permettre de faire
-                    l'automatisation sur n'importe quel ordinateur équipé de Docker</p>
-                <p>Ainsi nous avons eu accès à deux images (programme) permettant de faire de nos fichier html des
-                    fichiers pdf. </p>
+                <h2>Automatisation</h2>
+                <p>La partie automatisation nous a conduit à l’utilisation de langages comme PHP pour la recherche des
+                    commentaires dans les programmes en C, l'utilisation de la conteneurisation et plus particulièrement
+                    de Docker nous a permis d'utiliser des images et donc générer des PDF à partir de fichier HTML. Pour
+                    rendre l’automatisation plus facile nous avons utilisé la langage Bash pour créer les différents
+                    volumes et ainsi pour transférer les fichiers. </p>
             </article>
         </section>
     </main>

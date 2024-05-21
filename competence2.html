@@ -10,98 +10,57 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="competence1.html">Compétence 1</a></li>
-                <li><a href="competence2.html">Compétence 2</a></li>
-                <li><a href="competence3.html">Compétence 3</a></li>
-                <li><a href="competence4.html">Compétence 4</a></li>
-                <li><a href="competence5.html">Compétence 5</a></li>
-                <li><a href="competence6.html">Compétence 6</a></li>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Projets</a>
+                    <ul class="submenu">
+                        <li><a href="#">Développement d'application</a></li>
+                        <li><a href="#">Approche algorithmique</a></li>
+                        <li><a href="#">Installation d'un poste</a></li>
+                        <li><a href="#">Base de données</a></li>
+                        <li><a href="#">Site web</a></li>
+                        <li><a href="#">Environnement economique & écologique</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Le resolveur de sudoku</h1>
-        <p>Après le jeu du sudoku nous nous sommes intéréssé à résoudre différentes grille de ce jeu sudoku</p>
-        <ol>
-            <li>Implentation de techniques de résolution</li>
-            <li>Méthode du backtracking</li>
-            <li>Amélioration de backtracking</li>
-        </ol>
-        <p>Pour les trois techniques nous avons utilisé un tableau de structures définit comme ceci</p>
-        <code>
-            #define N 3 <br>
-            #define TAILLE N * N <br>
-            typedef struct <br>
-            { <br>
-            &nbsp;&nbsp;int valeur; <br>
-            &nbsp;&nbsp;int candidats[TAILLE]; <br>
-            &nbsp;&nbsp;int nbCandidats; <br>
-            }tCase1; <br>
-        </code>
-        <p>Nous retrouvons la valeur de la case, son nombre de candidats et ses candidats potentiels de la case</p>
         <section>
-            <h2>Implentation de techniques de résolution</h2>
             <article>
-                <h3>Singleton nu</h3>
-                <p>Cette technique vise à touver ou les cases n'ont qu'un seul candidat et donc à l'affecter à la case
-                </p>
-                <p>Des fonctions utilitaire ont été utilisé comme ajouterCanidats, retirerCandidat ou encore nbCandidats
-                </p>
-                <p>Ainsi elles ont été utiilisé à différentes reprises pour permettre d'implémenter les autres techniques
+                <h2>Implémentation de technique de résolution</h2>
+                <p>Après avoir créé le sudoku nous nous sommes intéressés sur différentes techniques de résolutions.
+                    Dans un
+                    premier temps nous avons implémenté la technique des singletons nus. La technique est simple sur une
+                    grille de 16 * 16 nous devions dans un premier temps voir les différents nombres possibles sur une
+                    case
+                    donnée. Toutes ces possibilités étaient stockées dans un tableau. Pour réaliser toutes cette
+                    opération
+                    nous avions plusieurs fonctions et procédures que vous pouvez retrouver le code source. </p>
+            </article>
+            <article>
+                <h2>Méthode du backtracking</h2>
+                <p>Une des méthode les plus utilisées est la méthode du backtracking. Cette méthode consiste à parcourir
+                    chaque case de la grille de sudoku et pour chaque case regarder si une valeur est possible. Si la
+                    valeur peut être posée sur la case elle sera posée dans le cas contraire on teste une autre valeur.
+                    Nous avons donc une fonction récursive, en effet elle s’appelle à chaque passage en passant à la
+                    case d’après à chaque fois.
+                    Cette méthode s'arrêtera quand la valeur aura atteint la TAILLE * TAILLE de la grille de sudoku
+                    signifiant que toutes les possibilités ont été testé.
                 </p>
             </article>
-        </section>
-        <section>
-            <h2>Méthode du backtracking</h2>
             <article>
-                <p>Le backtracking vise à parcourir la grille de valeur définit comme ceci</p>
-                <code>
-                    #define N 4 <br>
-                    #define TAILLE (N * N) <br>
-                    typedef int tGrille[TAILLE][TAILLE];
-                </code>
-                <p>Le backtracking regarde la première case et regarde si il peut placer une valeur comprise entre 1 et la 
-                    TAILLE</p>
-                <p>S'il la valeur peut être placée il l'a place et passe à l'autre case dans le cas contraire il teste
-                    une autre valeur</p>
-                <p>Il répète la fonction tant qu'il n'arrive pas à la fin de la grille (fonction récursive)</p>
-                <p>Le backtracking s'avère rapide sur des petites grille mais une optimisation est obligatoire pour des grille de 4 * 4</p>
+                <h2>Amélioration du backtracking</h2>
+                <p>Nous avons remarqué que les temps d'exécution étaient assez long pour des grille assez grandes (4*4).
+                    Nous avons donc choisi de changer la structure de la grille. Ainsi nous avons voulu compter le
+                    nombre de possibilités dans la grille pour chaque case. Avec cette partie préliminaire nous avons pu
+                    garder l’algorithme du backtracking mais en passant plus vite sur les cases et donc de résoudre une
+                    grille plus rapidement que la première version.</p>
             </article>
         </section>
-        <section>
-            <h2>Amélioration de backtracking</h2>
-            <article>
-                <p>La méthode de backtracking est une superbe méthode mais l'inconvénient majeur est sa lenteur</p>
-                <p>En effet, la fonction s'appelle par elle même à chaque nouvelle case et teste à nouveau toutes les
-                    possibilités</p>
-                <p>Nous avons donc opté pour une nouvelle vison, face à certaines difficultées rencontrées nous avons
-                    donc opté pour un ordre de passage </p>
-                <p>Ainsi en utilisant toujours le backtracking nous arrivons à des temps encourageant comme vous pouvez le
-                    constater.</p>
-                <iframe src="documents/BRUNEAU-GACHE_LAINE_Temps_execution_grilles_V2.pdf" frameborder="0"></iframe>
-                <p>Nous avons utilisé une structure différentes pour réailiser cette méthode.</p>
-                <code>
-                    typedef coordonnee ordre[TAILLE * TAILLE] ; <br>
-                    typedef struct{ <br>
-                    &nbsp;&nbsp;int i ; <br>
-                    &nbsp;&nbsp;int j ; <br>
-                    &nbsp;&nbsp;int val ; <br>
-                    } coordonnee;
-                </code>
-                <p>Cette structure est appelée dans la nouvelle version de backtracking. Ainsi il appelera dans un
-                    premier temps les cases ayant le moins de candidats posible ce qui augmenetra la rapidité de l'algorithme
-                    </p>
-            </article>
-        </section>
-        <section>
-            <h1>Conclusion</h1>
-            <p>La méthode de backtracking nous a apporté de la créativité dans la façcon de voir conceptualiser les
-                choses.</p>
-            <p>A REVOIR !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
-        </section>
-        <a href="https://gitlabiut.iutlan.univ-rennes1.fr/lbruneaugach/sae-1.02.git">Lien vers GitLab</a>
     </main>
 </body>
 
