@@ -1,4 +1,8 @@
-
+.foot{
+    font-size: 14px;
+    text-align: center;
+    flex-direction: row;
+}
 #imagesUtilisees{
     font-size: 10px;
 }
@@ -36,6 +40,10 @@ body {
 main{
     padding: 40px;
     background-color: #FAFAFA;
+}
+
+footer{
+    padding-left: 20px;
 }
 .projets {
     display: flex;
