@@ -27,7 +27,7 @@ a:hover{
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'roboto';
     margin: 0 auto;
     font-size: 19px;
     padding-top: 60px ; /* Espace pour le menu fixe */
@@ -122,4 +122,14 @@ nav {
     content: "";
     display: table;
     clear: both;
+}
+
+
+@font-face {
+
+    font-family: 'roboto';
+    src: url('polices/Roboto/robotocondensed-bold-webfont.woff2') format('woff2'),
+    url('polices/Roboto/robotocondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
