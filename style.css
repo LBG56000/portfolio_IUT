@@ -1,20 +1,56 @@
 
-.projets{
+.competence{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    justify-content: space-around;
+}
+
+#grand{
+    text-align: center;
+}
+
+#moi{
+    display: flex;
+    flex-direction: row;
+
+}
+
+a:hover{
+    background-color: #65b1e4;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    font-size: 19px;
+    padding-top: 60px ; /* Espace pour le menu fixe */
+}
+
+main{
+    padding: 40px;
+}
+.projets {
     display: flex;
     flex-direction: row;
     text-align: center;
 }
-/* Styles de base pour le corps et le menu */
-body {
-    font-family: Arial, sans-serif;
-    width: 80%;
-}
 
+/* Styles de base pour le corps et le menu */
 nav {
     display: flex;
-    flex-direction: row;
-    position: static;
+    justify-content: center;
+    position: fixed;
+    top: 0;
 
+    width: 100%;
+    background-color: #3f58c7;
+    z-index: 1000; /* Assure que le menu reste au-dessus du contenu */
 }
 
 .menu {
@@ -22,10 +58,10 @@ nav {
     margin: 0;
     padding: 0;
     display: inline-flex;
-    
     text-align: center;
 }
-.submenu{
+
+.submenu {
     list-style-type: none;
 }
 
@@ -34,42 +70,41 @@ nav {
     float: left;
 }
 
-.menu > li  {
+.menu > li {
     display: block;
-    padding: 14px 20px;
+    padding: 20px 20px;
 }
 
-.menu>li>a{
+.menu > li > a {
     text-decoration: none;
-    color: black;
-    text-align: right;
-    
+    color: white;
+    text-align: center;
 }
 
 .menu > li > a:hover {
-    background-color: white;
-    color: blue;
+    background-color: #65b1e4;
+    color: white;
 }
 
 /* Styles pour le sous-menu */
 .submenu {
     display: none;
     position: absolute;
-    background-color: #333;
+    background-color: #3f58c7;
     min-width: 160px;
     z-index: 1;
 }
 
 .submenu > li > a {
     color: white;
-    padding: 12px 16px;
+    padding: 12px 10px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 
 .submenu > li > a:hover {
-    background-color: #111;
+    background-color: #65b1e4;
 }
 
 /* Afficher le sous-menu lorsque l'élément parent est survolé */
