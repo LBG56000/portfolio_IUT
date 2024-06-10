@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Doc</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Documentation utilisateur </h1>
+    </header>
+
+    <section>
+	<h2>Sur cette page nous allons nous interesser à notre chaine de production lors de ce rendu </h2>
+        <article>
+	<h3>Nous verrons donc</h3>
+        <ul><li><p>La partie conceptualisation </p></li>
+        <li><p>La partie codage</p></li>	</ul>
+	</article>
+    </section>
+
+    <section>
+	<h2>La conceptualisation </h2>
+	<article>
+	<p></p>
+        <ul><li><p>Une documentation utilisateur </p></li>
+        <li><p>Trois programmes en langage C </p></li>
+        <li><p>Une documentation technique des programmes</p></li>
+	</ul>
+	<p></p>
+	<p><table><tr><td>Personne</td><td>En charge de</td></tr><tr><td>-</td><td>-</td></tr><tr><td>Léo</td><td>Documenation technique</td></tr><tr><td>Baptiste</td><td>Documenation utilisateur</td></tr><tr><td>Titouan</td><td>Production des programmes en C</td></tr><tr><td>Enzo</td><td>Documenation utilisateur</td></tr></table></p>
+	<p> </p>
+	<h3>Les programmes en langage C</h3>
+	<h4>Le morpion </h4>
+	<p> </p>
+	<pre> int main() {
+    t_grille grilleMorpion;
+    
+    initGrille(grilleMorpion);
+    afficher(grilleMorpion);
+
+    while (verifierGagnant(grilleMorpion) == 0) {
+        jeuJoueur(grilleMorpion);
+        jeuOrdi(grilleMorpion);
+        afficher(grilleMorpion);
+
+    }
+    switch (verifierGagnant(grilleMorpion)) {
+        case 1:
+            printf(&quot;Le Joueur gagne !\n&quot;);
+            break;
+        case 2:
+            printf(&quot;L&#039;ordinateur gagne !\n&quot;);
+            break;
+        case 3:
+            printf(&quot;EGALITE !\n&quot;);
+            break;
+    }
+    return 0;
+}
+ </pre>
+	<p> </p>
+	<h4>L'agenda </h4>
+	<p> </p>
+	<pre> int main()
+{
+    t_calendrier calend; /**Le calendrier commun &agrave; toutes les procedures et fonctions*/
+    int stack = 0;       /**La pile de t&acirc;che &agrave; faire*/
+
+    /** Affichage du menu et gestion des choix de l&#039;utilisateur*/
+    int section = menu();
+    while (section != 4)
+    {
+
+        switch (section)
+        {
+        case 1:
+            afficherTaches(&amp;calend, &amp;stack);
+            break;
+        case 2:
+            addTache(&amp;calend, &amp;stack);
+            break;
+        case 3:
+            supTache(&amp;calend, &amp;stack);
+            break;
+        }
+
+        section = menu();
+    }
+    printf(&quot;Bonne journee !&quot;);
+    return 0;
+}
+ </pre>
+	<p> </p>
+	<h4>Algorithmes de tri </h4>
+	<p> </p>
+	<p> </p>
+	<pre> int main() {
+    int section = menu();/**Obtenir le choix de l&#039;utilisateur pour l&#039;algorithme de tri*/ 
+    chaine chaineATrie;/**La chaine a trier commune &agrave; toute les procedures et fonctions*/
+    initChaine(chaineATrie);/**Initialiser un tableau avec des valeurs al&eacute;atoires*/
+    
+    /**Afficher le tableau initial*/ 
+    if (section &lt; 4) {
+        printf(&quot;\nChaine de depart :\n&quot;);
+        afficherChaine(chaineATrie);
+        printf(&quot;\nEtapes :\n&quot;);
+
+        /**Effectuer l&#039;algorithme de tri s&eacute;lectionn&eacute;*/
+        switch (section) {
+            case 1:
+                trieSelection(chaineATrie);
+                break;
+            case 2:
+                trieDichotomie(chaineATrie, 0, N - 1);
+                break;
+            case 3:
+                trieInsertion(chaineATrie);
+                break;
+        }
+
+        /**Afficher le tableau tri&eacute; final*/ 
+        printf(&quot;\nChaine de fin :\n&quot;);
+        afficherChaine(chaineATrie);
+    }
+    
+    printf(&quot;Bonne journee !\n&quot;);
+    return 0;
+}
+ </pre>
+	<p> </p>
+	<h3>Documentation technique / utilisateur </h3>
+        <ul><li><p>la documentation technique vise à détailler comment les programmes fonctionnent et surtout comment ils sont structurés</p></li>
+        <li><p>la documenation utilisteur vise à expliquer comment faire fonctionner les proagrammes. </p></li>
+	</ul>
+	</article>
+    </section>
+
+    <section>
+	<h2>Le codage </h2>
+	<article>
+        <ul><li><p>Utilisation de PHP</p></li>
+        <li><p>Utilisation de Docker </p></li>
+        <li><p>Un programme Bash</p></li>
+	</ul>
+	<p> </p>
+	<p><table><tr><td>Personne</td><td>Taches à faire</td></tr><tr><td>-</td><td>-</td></tr><tr><td>Léo</td><td>Bash/aide</td></tr><tr><td>Baptiste</td><td>PHP documentation utilisateur</td></tr><tr><td>Enzo</td><td>Bash</td></tr><tr><td>Titouan</td><td>PHP documentation technique</td></tr></table></p>
+	<h3>Le PHP  </h3>
+	<p> </p>
+	<p> </p>
+	<h3>Docker  </h3>
+	<p> </p>
+	<p> </p>
+	<h3>Le programme Bash  </h3>
+	<p> </p>
+	</article>
+    </section>
+
+    <footer>
+	<h4>Voila notre chaine de production pour permettre de faire les livrables que vous avez demandés, pour toutes questions nous restons à votre écoute </h4>
+	<p>Rédigé par Léo avec la participation de Baptiste, Titouan et Enzo  </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation technique des programmes</title>
+</head>
+<body>
+
+    <h1>Documentation technique des programmes</h1>
+    <p>M. PORHIEL, Machine &agrave; faire des pdf (v2.7.4)</p>
+    <section><h2>Programme : src1.c</h2><p>
+  Ce programme permet de créer un agenda avec des actions à faire 
+  elles seront rentrées par l'utlisateur
+ </p></section><section><h2>Imports</h2><ul><li>stdio.h</li><li>stdlib.h</li><li>string.h</li><li>stdbool.h</li></ul></section><section><h2>Typedefs</h2><h3>Structures</h3><p><table border="1">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Commentaire</th>
+                            <th>Variable</th>
+                        </tr><tr>
+                            <td>t_date</td>
+                            <td>Structure pour repr&amp;eacute;senter une date</td>
+                            <td>
+    int jour;  
+    int mois;  
+    int annee; 
+</td>
+                        </tr><tr>
+                            <td>t_tache</td>
+                            <td>Structure pour repr&amp;eacute;senter une t&amp;acirc;che &amp;agrave; r&amp;eacute;aliser</td>
+                            <td>
+    t_date date;    
+    char nom[50];   
+    char desc[999]; 
+</td>
+                        </tr><tr>
+                            <td>t_calendrier</td>
+                            <td>Structure pour repr&amp;eacute;senter un calendrier de t&amp;acirc;ches &amp;agrave; faire</td>
+                            <td>
+    t_tache taches[100]; 
+</td>
+                        </tr></table></p><h3>Autres</h3><p>Il n'y en a pas.</p></section><section><h2>Constantes</h2>Il n'y en a pas.</section><section><h2>Fonctions</h2><table border='1'>
+                        <tr>
+                            <th>Function</th>
+                            <th>Commentaire</th>
+                            <th>Param&egrave;tres</th>
+                            <th>Retourne</th>
+                        </tr><tr>
+                            <td>int main</td>
+                            <td>programme principal permettant la saisie des t&acirc;ches</td>
+                            <td></td>
+                            <td>0 si le programme s&#039;est deroulee sans accros</td>
+                        </tr><tr>
+                            <td>int menu</td>
+                            <td>Fonction pour afficher le menu et obtenir le choix de l&#039;utilisateur</td>
+                            <td></td>
+                            <td>le choix de l&#039;utilisateur</td>
+                        </tr><tr>
+                            <td>void afficherTaches</td>
+                            <td>Procedure pour afficher les t&acirc;ches triees par date</td>
+                            <td>cal de type t_calendrier, stack la pile de t&acirc;ches</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void trierTaches</td>
+                            <td>procedure pour trier les t&acirc;ches par date</td>
+                            <td>cal de type t_calendrier, stack de type entier</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void echangeTaches</td>
+                            <td>Cette procedure permet d&#039;echanger les t&acirc;ches pour les trier</td>
+                            <td>indexTache1 l&#039;index de la premiere t&acirc;che &agrave; &eacute;changer, indexTache2 l&#039;index de la deuxi&egrave;me t&acirc;che &agrave; &eacute;changer, cal le calendrier final</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void addTache</td>
+                            <td>Procedure pour ajouter une tache au calendrier</td>
+                            <td>cal le calendrier, stack la pile de t&acirc;che</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>t_tache saisirTache</td>
+                            <td>Fonction permettant de saisir une t&acirc;che</td>
+                            <td>cal le calendrier</td>
+                            <td>t_tache</td>
+                        </tr><tr>
+                            <td>void supTache</td>
+                            <td>Procedure pour supprimer une t&acirc;che dans un calendrier</td>
+                            <td>cal le calendrier ou ne devons supprimer la t&acirc;che, stack la pile de t&acirc;che ou nous devons supprimer la t&acirc;che</td>
+                            <td></td>
+                        </tr></table></section><hr><section><h2>Programme : src2.c</h2><p>
+  Ce programme vise à choisir un mode de tri.
+  Puis selon le choix de l'utilisateur on trie la chaine
+  Il permet de voir différent type de tri
+</p></section><section><h2>Imports</h2><ul><li>stdio.h</li><li>stdlib.h</li><li>time.h</li></ul></section><section><h2>Typedefs</h2><h3>Structures</h3><p>Il n'y en a pas.</p><h3>Autres</h3><p><table border="1">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Commentaire</th>
+                        </tr><tr>
+                            <td>chaine[N]</td>
+                            <td>int</td>
+                            <td>La chaine de nombres &agrave; trier</td>
+                        </tr></table></p></section><section><h2>Constantes</h2><table border="1">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Valeur</th>
+                            <th>Constante</th>
+                        </tr><tr>
+                                <td>N</td>
+                                <td></td>
+                                <td>10 </td>
+                                <td>define</td>
+                            </tr></table></section><section><h2>Fonctions</h2><table border='1'>
+                        <tr>
+                            <th>Function</th>
+                            <th>Commentaire</th>
+                            <th>Param&egrave;tres</th>
+                            <th>Retourne</th>
+                        </tr><tr>
+                            <td>int main</td>
+                            <td>programme principal permettant de trier une chaine</td>
+                            <td></td>
+                            <td>renvoie 0 si le programme s&#039;est d&eacute;roul&eacute; sans accros</td>
+                        </tr><tr>
+                            <td>int menu</td>
+                            <td>Il s&#039;agit de la d&#039;une fonction qui &agrave; pour but d&#039;obtenir le choix de l&#039;utilisateur pour l&#039;algorithme de tri</td>
+                            <td></td>
+                            <td>reponse correspond au choix de l&#039;utilisateur</td>
+                        </tr><tr>
+                            <td>void initChaine</td>
+                            <td>Proc&eacute;dure permettant d&#039;initialiser la chaine avec des valeurs al&eacute;atoires</td>
+                            <td>c un parametre de type chaine  correspondant &agrave; la chaine &agrave; trier</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void afficherChaine</td>
+                            <td>Cette proc&eacute;dure permet d&#039;afficher la chaine pass&eacute;e en param&egrave;tre</td>
+                            <td>&egrave;tre, c la chaine &agrave; afficher, &egrave;tre</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void trieSelection</td>
+                            <td>Cette procedure permet de trier la chaine avec le tris par selection en selectionnant une valeur minimun et en la comparant avec les autres</td>
+                            <td>c la chaine &agrave; trier</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void echange</td>
+                            <td>Cette proc&eacute;dure permet d&#039;&eacute;changer deux valeurs contenu dans le tableau grace aux indices</td>
+                            <td>indexA premi&egrave;re valeur &agrave; &eacute;changer, indexB deuxi&egrave;me valeur &agrave; &eacute;changer</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void trieDichotomie</td>
+                            <td>Cette procedure permet de r&eacute;aliser le tris dichotomique</td>
+                            <td>c la chaine en question, debut l&#039;indice de debut chaine, fin l&#039;indice de fin de la chaine</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>int partition</td>
+                            <td>Fonction pour partitionner le tableau pour le tri dichotomique</td>
+                            <td>c la chaine, debut l&#039;indice de debut, fin l&#039;indice de fin</td>
+                            <td>i + 1</td>
+                        </tr><tr>
+                            <td>void trieInsertion</td>
+                            <td>Proc&eacute;dure pemettant le tris par insertion</td>
+                            <td>c la chaine &agrave; trier</td>
+                            <td></td>
+                        </tr></table></section><hr><section><h2>Programme : src3.c</h2><p>
+  Programme permettant de jouer au morpion tout seul contre l'ordinateur
+ </p></section><section><h2>Imports</h2><ul><li>stdio.h</li><li>stdlib.h</li><li>time.h</li><li>stdbool.h</li></ul></section><section><h2>Typedefs</h2><h3>Structures</h3><p>Il n'y en a pas.</p><h3>Autres</h3><p><table border="1">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Commentaire</th>
+                        </tr><tr>
+                            <td>t_grille[TAILLE][TAILLE]</td>
+                            <td>char</td>
+                            <td>Nouveau type t_grille</td>
+                        </tr></table></p></section><section><h2>Constantes</h2><table border="1">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Valeur</th>
+                            <th>Constante</th>
+                        </tr><tr>
+                                <td>VIDE</td>
+                                <td></td>
+                                <td>'.'</td>
+                                <td>define</td>
+                            </tr><tr>
+                                <td>ORDI</td>
+                                <td></td>
+                                <td>'X'</td>
+                                <td>define</td>
+                            </tr><tr>
+                                <td>JOUEUR</td>
+                                <td></td>
+                                <td>'O'</td>
+                                <td>define</td>
+                            </tr><tr>
+                                <td>TAILLE</td>
+                                <td></td>
+                                <td>3</td>
+                                <td>define</td>
+                            </tr></table></section><section><h2>Fonctions</h2><table border='1'>
+                        <tr>
+                            <th>Function</th>
+                            <th>Commentaire</th>
+                            <th>Param&egrave;tres</th>
+                            <th>Retourne</th>
+                        </tr><tr>
+                            <td>int main</td>
+                            <td>progragmme principal permmettant de jouer au morpion</td>
+                            <td></td>
+                            <td>0 si le prgramme s&#039;est d&eacute;roul&eacute; sans accros</td>
+                        </tr><tr>
+                            <td>void initGrille</td>
+                            <td>Procedure permettant d&#039;initialiser la grille avec &#039;.&#039;</td>
+                            <td>grille la grille de jeu &agrave; initialiser</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void afficher</td>
+                            <td>Procedure permettant d&#039;afficher la grille de jeu</td>
+                            <td>grille la grille de jeu</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void saisirNombre</td>
+                            <td>Procedure permettant de saisir un chiffre</td>
+                            <td>nombre le chiffre en question, ligne, colonne</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void jeuJoueur</td>
+                            <td>Procedure pour mettre la case selectionner dans la grille</td>
+                            <td>grille la grille de jeu</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>void jeuOrdi</td>
+                            <td>Procedure permettant de faire jouer l&#039;ordi</td>
+                            <td>grille la grille de jeu</td>
+                            <td></td>
+                        </tr><tr>
+                            <td>int genererNombre</td>
+                            <td>Fonction pour g&eacute;nerer un nombre</td>
+                            <td>min avec un minimun, max avec un maximun</td>
+                            <td>un entier correspondant &agrave; la valeur trouv&eacute;e</td>
+                        </tr><tr>
+                            <td>int verifierGagnant</td>
+                            <td>Fonction qui verifie qui a gagn&eacute;</td>
+                            <td>grille la grille de jeu</td>
+                            <td>un entier pour savoir qui a gagn&eacute;</td>
+                        </tr><tr>
+                            <td>bool estComplete</td>
+                            <td>Fonction pour savoir si la grille est complete</td>
+                            <td>grille la grille de jeu</td>
+                            <td>un bool&eacute;en pour savoir si la grille est complete</td>
+                        </tr></table></section>    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        hr {
+            border: 0; 
+            height: 2px; 
+            background-color: #000;
+            margin: 20px 0; 
+            font-weight: bold;
+        }
+        h1 {
+            color: green;
+        }
+        td:empty{
+            background-color: gray;
+        }
+    </style>
+
+</body>
+</html>
