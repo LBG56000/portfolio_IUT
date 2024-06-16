@@ -1,6 +1,25 @@
+
+.redaction > article > h2{
+
+    border-bottom: 2px blue solid;
+    width: 600px;
+}
+
+
+.langages{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+#photos > img{
+    transition: transform 0.3s ease;
+}
 #photos > img:hover{
-    width: 200px;
-    height: 200px;
+    transform: scale(1.5);
 }
 
 #imageEchecs{
@@ -59,7 +78,10 @@ footer{
     display: flex;
     flex-direction: row;
     text-align: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+
 }
 
 /* Styles de base pour le corps et le menu */
@@ -103,8 +125,7 @@ nav {
 }
 
 .menu > li > a:hover {
-    background-color: #65b1e4;
-    margin: 10px;
+
     color: white;
 }
 

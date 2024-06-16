@@ -25,9 +25,10 @@
                     </ul>
                 </li>
                 <li><a href="contact.html"> <img src="images/Symboles/logo_telephoner.png" alt="logo_telephoner"
-                    title="Contactez-moi" width="30" height="30">Contact</a></li>
-                <li><a href="passions.html"><img src="images/Symboles/logo_ampoule.png" alt="logo_ampoule" title="Mes passions" width="30" height="30">Mes passions</a></li>
-                <li><a href="CV_BRUNEAU_GACHE_Léo.pdf" target="_blank"> <img src="images/Symboles/cv.png" alt="logo_cv"
+                            title="Contactez-moi" width="30" height="30">Contact</a></li>
+                <li><a href="passions.html"><img src="images/Symboles/logo_ampoule.png" alt="logo_ampoule"
+                            title="Mes passions" width="30" height="30">Mes passions</a></li>
+                <li><a href="CV_BRUNEAU_GACHE_Léo .pdf" target="_blank"> <img src="images/Symboles/cv.png" alt="logo_cv"
                             title="Mon CV" width="30" height="30">Mon CV</a></li>
             </ul>
         </nav>
@@ -51,7 +52,7 @@
                 </ul>
             </article>
         </section>
-        <section>
+        <section class="redaction">
             <article>
                 <h2>Implémentation de technique de résolution</h2>
                 <p>Après avoir créé le sudoku nous nous sommes intéressés sur différentes techniques de résolutions.
@@ -59,34 +60,39 @@
                     premier temps nous avons implémenté la technique des singletons nus. La technique est simple sur une
                     grille de 16 * 16 nous devions dans un premier temps voir les différents nombres possibles sur une
                     case
-                    donnée. Toutes ces possibilités étaient stockées dans un tableau. Pour réaliser toutes cette
-                    opération
-                    nous avions plusieurs fonctions et procédures que vous pouvez retrouver le code source. </p>
+                    donnée. Toutes ces possibilités étaient stockées dans un tableau. Pour réaliser toutes ces
+                    opérations,
+                    nous avions plusieurs fonctions et procédures que vous pouvez retrouver. </p>
                     <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/resolveurSudoku/ELIMINATION_Version1.c" target="_blank">Version 1</a>
                     <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/resolveurSudoku/ELIMINATION_Version2.c" target="_blank">Version 2</a>
             </article>
             <article>
                 <h2>Méthode du backtracking</h2>
-                <p>Une des méthode les plus utilisées est la méthode du backtracking. Cette méthode consiste à parcourir
+                <p>Une des méthodes les plus utilisée est la méthode du backtracking. Cette méthode consiste à parcourir
                     chaque case de la grille de sudoku et pour chaque case regarder si une valeur est possible. Si la
-                    valeur peut être posée sur la case elle sera posée dans le cas contraire on teste une autre valeur.
-                    Nous avons donc une fonction récursive, en effet elle s’appelle à chaque passage en passant à la
-                    case d’après à chaque fois.
-                    Cette méthode s'arrêtera quand la valeur aura atteint la TAILLE * TAILLE de la grille de sudoku
-                    signifiant que toutes les possibilités ont été testé.
+                    valeur peut être posée sur la case elle sera posée. Dans le cas contraire on teste une autre valeur.
+                    Nous avons donc une fonction récursive, en effet elle s’appelle à chaque passage de passer à la
+                    case d’après.
+                    Cette méthode s'arrêtera quand la valeur aura atteint la taille * taille de la grille de sudoku
+                    signifiant que toutes les possibilités ont été testées.
                 </p>
                 <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/resolveurSudoku/RESOLUTION_1.c" target="_blank">Méthode du backtracking</a>
             </article>
             <article>
                 <h2>Amélioration du backtracking</h2>
-                <p>Nous avons remarqué que les temps d'exécution étaient assez long pour des grille assez grandes (4*4).
-                    Nous avons donc choisi de changer la structure de la grille. Ainsi nous avons voulu compter le
+                <p>Nous avons remarqué que les temps d'exécution étaient assez longs pour des grilles assez grandes.
+                    Nous avons donc choisi de changer la structure de la grille. Ainsi nous avons compté le
                     nombre de possibilités dans la grille pour chaque case. Avec cette partie préliminaire nous avons pu
                     garder l’algorithme du backtracking mais en passant plus vite sur les cases et donc de résoudre une
                     grille plus rapidement que la première version.</p>
                 <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/resolveurSudoku/RESOLUTION_2.c" target="_blank">Code optimisé</a>
                 <a href="https://github.com/LBG56000/Projets_BUT_1/blob/main/resolveurSudoku/tempsExecution.pdf" target="_blank">Les différents temps d'exécution</a>
             </article>
+        </section>
+        <br>
+        <h2>Langage utlisés</h2>
+        <section class="langages">
+            <img src="images/Symboles/c.png" alt="logoC" title="Language C" width="106" height="118">
         </section>
         <br>
         <br>
@@ -96,7 +102,7 @@
         </section>
     </main>
     <footer class="foot">
-        <p><pour>Site Réalisé par BRUNEAU-GACHE Léo V4.2 pour toutes questions <a href="contact.html">Contactez-moi</a></p>
+        <p>Site Réalisé par BRUNEAU-GACHE Léo V4.2 pour toutes questions <a href="contact.html">Contactez-moi</a></p>
         <div id="imagesUtilisees">
             <p>Images utilisées</p>
             <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil"
