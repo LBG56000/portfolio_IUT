@@ -1,3 +1,9 @@
+
+
+p{
+    font-family: 'roboto_normal';
+    font-weight: bold;
+}
 .contact{
     display: flex;
     flex-direction: row;
@@ -17,7 +23,7 @@ figcaption{
 .redaction > article > h2{
 
     border-bottom: 2px blue solid;
-    width: 600px;
+    width: 700px;
 }
 
 
@@ -237,3 +243,13 @@ nav {
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+
+    font-family: 'roboto_normal';
+    src: url('polices/Roboto/roboto-light-webfont.woff2') format('woff2'),
+    url('polices/Roboto/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
