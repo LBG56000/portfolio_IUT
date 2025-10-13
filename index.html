@@ -11,50 +11,81 @@
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html"> <img src="images/Symboles/logo_accueil.png" alt="logo_accueil" title="Accueil"
-                            width="30" height="30"> Accueil</a></li>
-                <li><a href="#"> <img src="images/Symboles/logo_projet.png" alt="logo_projet" title="Projets" width="30"
-                            height="30">Projets</a>
-                    <ul class="submenu">
-                        <li><a href="competence1.html">Développement d'application</a></li>
-                        <li><a href="competence2.html">Approche algorithmique</a></li>
-                        <li><a href="competence3.html">Installation d'un poste</a></li>
-                        <li><a href="competence4.html">Base de données</a></li>
-                        <li><a href="competence5.html">Gestion de projet</a></li>
-                        <li><a href="competence6.html">Travail en équipe informatique</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html"> <img src="images/Symboles/logo_telephoner.png" alt="logo_telephoner"
-                            title="Contactez-moi" width="30" height="30">Contact</a></li>
-                <li><a href="passions.html"><img src="images/Symboles/logo_ampoule.png" alt="logo_ampoule"
-                            title="Mes passions" width="30" height="30">Mes passions</a></li>
-                <li><a href="CV_BRUNEAU_GACHE_Léo.pdf" target="_blank"> <img src="images/Symboles/cv.png" alt="logo_cv"
-                            title="Mon CV" width="30" height="30">Mon CV</a></li>
+                <a href="index.html"> Accueil</a>
+                <a href="projects.html">Projets</a>
+                <a href="contact.html">Contact</a>
+                <a href="passions.html">Mes passions</a>
+                <a href="CV_BRUNEAU_GACHE_Léo.pdf" target="_blank">Mon CV</a>
             </ul>
         </nav>
     </header>
     <main>
-        <h1 id="grand">Portfolio de Léo BRUNEAU-GACHE</h1>
-        <h1 id="encours">En recherche d'alternance développeur logiciel</h1>
-        <div id="moi">
-            <figure>
-                <img src="images/Divers/photo_leo.jpg" alt="Léo BRUNEAU-GACHE" title="Léo BRUNEAU-GACHE" width="200"
-                    height="200">
-                <figcaption>Léo BRUNEAU-GACHE</figcaption>
-            </figure>
-            <p>La formation BUT informatique à l'Institut Universitaire de Technologie de Lannion (Côtes-d'Armor) m'a
-                apporté différentes compétences. <br>
-                Les compétences ont été acquises via différents projets autant personnel que des projets universitaires.
-                <br>
-                Aujourd'hui à la recherche d'une alternance dans le domaine du développement logiciel, ce choix me
-                permettra d'acquérir des compétences techniques mais aussi des compétences personnelles comme le travail
-                dans une entreprise ou encore la communication interne.
-            </p>
+        <div id="me">
+            <h1>Bonjour, bienvenue sur le portfolio de Léo BRUNEAU-GACHE</h1>
+            <div>
+                <img src="images/Divers/photo_leo.jpg" alt="Léo BRUNEAU-GACHE" title="Léo BRUNEAU-GACHE" width="400" height="400">
+            </div>
         </div>
+        <section>
+            <h2>Mon parcours</h2>
+            <div class="timelineSVG">
+                <svg width="900" height="300" xmlns="http://www.w3.org/2000/svg" class="timeline">
+                    <linearGradient id="gradient1">
+                        <stop offset="5%" stop-color="#94f7ee" />
+                        <stop offset="95%" stop-color="#40e0d0" />
+                    </linearGradient>
+                    <linearGradient id="gradient2">
+                        <stop offset="5%" stop-color="#40e0d0" />
+                        <stop offset="95%" stop-color="#207d74" />
+                    </linearGradient>
+                
+                    <circle id="bac" class="circle" cx="50" cy="150" r="30" />
+                    <line x1="50" y1="180" x2="50" y2="210" stroke="#94f7ee" stroke-width="3" />
+                    <rect x="10" y="200" width="300" height="50" rx="5" ry="5" fill="white" stroke="#94f7ee" stroke-width="3" />
+                    <g id="popupBac">
+                        <text id="textBac" y="200">
+                            <tspan x="20" dy="20">2023 - BAC obtenu avec la mention bien</tspan>
+                            <tspan x="20" dy="20">au Lycée Colbert à Lorient, 56100</tspan>
+                        </text>
+                    </g>
+                    <rect id="transition1" x="75" y="150" width="300" height="5" fill="url(#gradient1)"/>
+                
+                    <circle id="iut" class="circle" cx="400" cy="150" r="30" />
+                    <rect id="transition2" x="425" y="150" width="300" height="5" fill="url(#gradient2)"/>
+                    <rect x="270" y="30" width="290" height="70" rx="5" ry="5" fill="white" stroke="#40e0d0" stroke-width="3"/>
+                    <line x1="400" y1="100" x2="400" y2="120" stroke="#40e0d0" stroke-width="3" />
+                    <g id="popupIut">
+                        <text id="textIut" y="30">
+                            <tspan x="280" dy="20">2024 - Actuellement à l'IUT de lannion</tspan>
+                            <tspan x="280" dy="20">en BUT informatique, parcours</tspan>
+                            <tspan x="280" dy="20">développement d'application</tspan>
+                        </text>
+                    </g>
+                
+                    <circle id="aprenticeship" class="circle" cx="750" cy="150" r="30" />
+                    <rect x="570" y="200" width="290" height="70" rx="5" ry="5" fill="white" stroke="#207d74" stroke-width="3" />
+                    <line x1="750" y1="180" x2="750" y2="200" stroke="#207d74" stroke-width="3"/>
+                    <g id="popupAprenticeship">
+                        <text id="textAprenticeship" y="200">
+                            <tspan x="580" dy="20">2024 - Actuellement à l'IUT de lannion</tspan>
+                            <tspan x="580" dy="20">en BUT informatique</tspan>
+                            <tspan x="580" dy="20">parcours développement d'application</tspan>
+                        </text>
+                    </g>
+                </svg>
+            </div>
+        </section>
+        <p>La formation BUT informatique à l'Institut Universitaire de Technologie de Lannion (Côtes-d'Armor) m'a
+            apporté différentes compétences. <br>
+            Les compétences ont été acquises via différents projets autant personnel que des projets universitaires.
+            <br>
+            Aujourd'hui alternant chez Cooperl, je peux mettre mes compétences techniques mais aussi humaines au sein cette organisation.
+        </p>
         <section>
             <h2>Mes différents projets réalisés à l'IUT</h2>
             <article>
-                <div class="projets">
+                <script src="scripts/carousel.js"></script>
+                <div class="projects">
                     <figure>
                         <a href="competence1.html"><img src="images/Semestre1/projet1/projet_sudoku.png"
                                 alt="Grille de sudoku" title="Jeu du sudoku" width="100" height="100"></a>
@@ -101,61 +132,12 @@
                                 alt="Les Oeufs-lympiades" title="Les oeufs-lympiades" width="180" height="100"></a>
                         <figcaption>Les Oeufs-lympiades</figcaption>
                     </figure>
-
                 </div>
             </article>
-        </section>
-        <section>
-            <h2>Mon parcours</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h2>BUT informatique</h2>
-                        <p>Depuis septembre 2023</p>
-                        <p>BUT informatique à l'IUT de Lannion </p> <br>
-                        <a href="https://iut-lannion.univ-rennes.fr/informatique">BUT informatique</a>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h2>Baccalauréat général</h2>
-                        <p>2020 - 2023</p>
-                        <p>Lycée Colbert à Lorient, spécialitées mathématiques et numériques,sciences de l'informatique.</p>
-                        <a href="https://lycee-colbert-lorient.com/">Lien du lycée</a>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h2>Bachibac </h2>
-                        <p>2020 - 2023</p>
-                        <p>Certification en langue espagnole réalisée au lycée Colbert à Lorient. </p>
-                        <a href="https://lycee-colbert-lorient.com/international/#:~:text=Qu'est%2Dce%20que%20le,certains%20%C3%A9tablissements%20fran%C3%A7ais%20et%20espagnols.">Lien bachibac</a>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h2>BAFA</h2>
-                        <p>2022 - 2023</p>
-                        <p>Brevet d'aptitudes aux fonctions d'animateur</a></p>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
     <footer class="foot">
         <p>Site Réalisé par Léo BRUNEAU-GACHE pour toute question <a href="contact.html">Contactez-moi</a></p>
-        <div id="imagesUtilisees">
-            <p>Images utilisées</p>
-            <a href="https://www.flaticon.com/fr/icones-gratuites/bouton-daccueil"
-                title="bouton d'accueil icônes">Bouton d'accueil-Pixel perfect</a>
-            <a href="https://www.flaticon.com/fr/icones-gratuites/projet" title="projet icônes">Projet icônes -
-                Freepik</a>
-            <a href="https://www.flaticon.com/fr/icones-gratuites/contact" title="contact icônes">Contact icônes
-                alkhalifi design</a>
-            <a href="https://www.flaticon.com/fr/icones-gratuites/developpement-dapplications"
-                title="développement d'applications icônes">Développement d'applications icônes justicon</a>
-            <a href="https://www.flaticon.com/fr/icones-gratuites/cv" title="cv icônes">Cv icône - Freepik</a>
-        </div>
     </footer>
 </body>
 

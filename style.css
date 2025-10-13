@@ -1,238 +1,84 @@
+header{
+    background-color: #f1efef;
+    padding: 0.1em;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
-p{
+body{
     font-family: 'roboto_normal';
-    font-weight: bold;
-}
-.contact{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
 }
 
-figcaption{
-    text-align: center;
-}
-
-.programme{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.redaction > article > h2{
-
-    border-bottom: 2px blue solid;
-    width: 700px;
-}
-
-
-.langages{
-    display: flex;
-    flex-direction: row;
-}
-
-#phtos{
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-}
-
-#photos > img{
-    transition: transform 0.3s ease;
-}
-#photos > img:hover{
-    transform: scale(1.5);
-}
-
-#imageEchecs{
-    font-size: 10px;
-    
-}
-
-.foot{
-    font-size: 14px;
-    text-align: center;
-    flex-direction: row;
-}
-#imagesUtilisees{
-    font-size: 10px;
-}
-.competence{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:center;
-    justify-content: space-around;
-}
-
-#grand{
-    text-align: center;
-}
-
-#moi{
-    display: flex;
-    flex-direction: row;
-
-}
-
-a:hover{
-    background-color: #65b1e4;
+a {
     color: black;
 }
 
+#me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    padding: 1em;
+}
 
-body {
-    font-family: 'roboto';
-    margin: 0 auto;
-    font-size: 24px;
-    padding-top: 60px ; /* Espace pour le menu fixe */
+#me img {
+    border-radius: 20em;
+}
+
+.projects {
+    display: flex;
+    position: relative;
+    width: auto;
+    margin: auto;
+    overflow: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    justify-self: center;
+}
+
+.projects figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+}
+
+.projects img {
+    border-radius: 20em;
+}
+
+.timeline{
+    margin: 2em;
+}
+#bac{
+    fill: #94f7ee;
+}
+
+#iut{
+    fill: #40e0d0;
+}
+#aprenticeship{
+    fill: #207d74;
 }
 
 main{
-    padding: 40px;
-    background-color: #FAFAFA;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
 }
 
-footer{
-    padding-left: 20px;
-}
-.projets {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-self: center;
-    justify-content: center;
-
-}
-
-/* Styles de base pour le corps et le menu */
-nav {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-
-    width: 100%;
-    background-color: #3f58c7;
-    z-index: 1000; /* Assure que le menu reste au-dessus du contenu */
-}
-
-.menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    text-align: center;
-}
-
-.submenu {
-    list-style-type: none;
-}
-
-.menu > li {
-    position: relative;
-    float: left;
-}
-
-.menu > li {
-    display: block;
-    padding: 20px 20px;
-}
-
-.menu > li > a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-}
-
-.menu > li > a:hover {
-
-    color: white;
-}
-
-/* Styles pour le sous-menu */
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #3f58c7;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.submenu > li > a {
-    color: white;
-    padding: 10px 10px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.submenu > li > a:hover {
-    background-color: #65b1e4;
-    color: black;
-}
-
-/* Afficher le sous-menu lorsque l'élément parent est survolé */
-.menu > li:hover .submenu {
-    display: block;
-}
-
-/* Réinitialiser le float */
-.menu::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-.timeline {
+.timelineSVG {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 40px 0;
+    justify-content: center;
 }
-
-.timeline:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #C5C5C5;
-    transform: translateY(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    flex: 0 0 200px;
-    margin: 0 20px;
-}
-
-.timeline-content {
-    padding: 20px;
-    background: white;
-    position: relative;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    top: -70px;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    top: 70px;
-}
-
-
-
 
 
 @font-face {
