@@ -18,6 +18,7 @@ a {
 }
 
 #me {
+    margin-top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -28,6 +29,20 @@ a {
 
 #me img {
     border-radius: 20em;
+}
+
+.projects figure{
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects figure:hover{
+    transform: scale(0.9);
+}
+
+#myImage{
+    background-color: #207d74;
+    border-radius: 15em;
+    padding: 1em;
 }
 
 .projects {
@@ -78,6 +93,39 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.projectsCard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.project {
+    border: #207d74 2px solid;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2em;
+    margin: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    justify-content: space-around;
+}
+
+.project img {
+    width: 2.5em;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;  
+    margin: 0.1em;
+}
+
+.contact p {
+    margin-left: 0.5em;
 }
 
 
