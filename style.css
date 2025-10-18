@@ -107,15 +107,12 @@ main{
 .project {
     border: #207d74 2px solid;
     border-radius: 1em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     font-size: 1.2em;
     margin: 0.5em;
     padding-left: 0.5em;
     padding-right: 0.5em;
-    justify-content: space-around;
-    position: relative;
 }
 
 .project img {
@@ -124,12 +121,15 @@ main{
     border-radius: 10px;
 }
 
+.languages {  
+    grid-column: 3;  
+}
+
 .languages p{
     font-size: 0.8em;
 }
 
-.project .skill{
-    position: absolute;
+.project .skill{    
     top:0;
     left: 0;
     margin: 0.5em;
@@ -147,11 +147,13 @@ main{
 }
 
 .skill {
+    align-self: start;
     display: flex;
     flex-direction: row;    
     justify-items: center;
     align-items: center;
     margin-right: 1em;
+    grid-column: 1;
 }
 
 .color{
