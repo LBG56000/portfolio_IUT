@@ -101,32 +101,17 @@ main{
 
 .projectsCard{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
 }
 
 .project {
     border: #207d74 2px solid;
     border-radius: 1em;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
     font-size: 1.2em;
     margin: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-.project img {
-    width: 1.5em;
-    color: #05215f;
-    border-radius: 10px;
-}
-
-.languages {  
-    grid-column: 3;  
-}
-
-.languages p{
-    font-size: 0.8em;
+    padding: 0.8em;
+    text-align: center;
+    cursor: pointer;
 }
 
 .project .skill{    
@@ -156,10 +141,15 @@ main{
     grid-column: 1;
 }
 
+.skill p {
+    margin-left: 0.2em;
+}
+
 .color{
     width: 1em;
     height: 1em;
     margin: 0.2em;
+    border-radius: 20em;
 }
 
 .color-red{ background-color: #b60804;}
