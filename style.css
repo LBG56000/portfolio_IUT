@@ -164,6 +164,23 @@ main{
     flex-direction: row;
 }
 
+.competence{
+    display: flex;
+    flex-direction: row;
+}
+
+.competence > *{
+    margin: 1em;
+}
+
+.projectStep {
+    font-size: 1.8em;
+}
+
+.projectStepText{
+    margin-left: 0.5em;
+}
+
 @font-face {
   font-family: 'Montserrat-italic';
   src: url('polices/Roboto/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
