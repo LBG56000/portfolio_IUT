@@ -8,6 +8,13 @@ header{
     justify-content: space-evenly;
 }
 
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu a {
+    text-decoration: none;
+}
 
 body{
     font-family: 'Montserrat';
@@ -31,12 +38,17 @@ a {
     padding: 1em;
 }
 
+#me h1{
+    margin: 2em;
+}
+
 #me img {
-    border-radius: 20em;
+    border-radius: 10em;
 }
 
 .projects figure{
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .projects figure:hover{
@@ -71,12 +83,9 @@ a {
 }
 
 .projects img {
-    border-radius: 20em;
+    border-radius: 1em;
 }
 
-.timeline{
-    margin: 2em;
-}
 #bac{
     fill: #94f7ee;
 }
@@ -101,7 +110,7 @@ main{
 
 .projectsCard{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .project {
@@ -109,9 +118,22 @@ main{
     border-radius: 1em;
     font-size: 1.2em;
     margin: 0.5em;
-    padding: 0.8em;
     text-align: center;
     cursor: pointer;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+}
+
+
+.project div img {
+    width: 100%;
+    border-radius: 1em 1em 0 0 ;
+}
+
+.project .text {
+    font-weight: bold;
+    padding: 1em; 
+    text-align: left;
 }
 
 .project .skill{    
@@ -145,12 +167,6 @@ main{
     margin-left: 0.2em;
 }
 
-.color{
-    width: 1em;
-    height: 1em;
-    margin: 0.2em;
-    border-radius: 20em;
-}
 
 .color-red{ background-color: #b60804;}
 .color-orange{ background-color: #eb8d50;}
@@ -179,6 +195,15 @@ main{
 
 .projectStepText{
     margin-left: 0.5em;
+}
+
+#logoPACT{
+    margin-top: 2em;
+}
+
+#logoSQL{
+    margin-top: 1em;
+
 }
 
 @font-face {
