@@ -1,6 +1,12 @@
 header{
-    background-color: #f1efef;
+    background-color: #147068;
+    margin-bottom: 20em;
     padding: 0.1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    box-shadow: 0px 2px 5px 0px #207d74;
 }
 
 .menu{
@@ -8,16 +14,26 @@ header{
     justify-content: space-evenly;
 }
 
+
 .menu a:hover {
     text-decoration: underline;
 }
 
 .menu a {
     text-decoration: none;
+    color: white;
+    font-size: 1.3em;
 }
 
 body{
-    font-family: 'Montserrat';
+    font-family: 'Geologica';
+    padding: 0;
+    margin: 0;
+    background-color: #ddedec;
+}
+
+footer {
+    margin: 0.5em;
 }
 
 a {
@@ -98,6 +114,7 @@ a {
 }
 
 main{
+    margin-top: 5em;
     margin-left: 1.5em;
     margin-right: 1.5em;
 }
@@ -114,7 +131,7 @@ main{
 }
 
 .project {
-    border: #207d74 2px solid;
+    border: #207d74 3px solid;
     border-radius: 1em;
     font-size: 1.2em;
     margin: 0.5em;
@@ -122,10 +139,17 @@ main{
     cursor: pointer;
     display: grid;
     grid-template-rows: repeat(2,1fr);
+    transition: transform 0.3s ease-in-out;
+    background-color: #207d7442;
 }
 
+.project:hover{
+    transform: scale(1.01);
+    box-shadow: 0em 0em 0.5em 0.5em #207d74;
+}
 
 .project div img {
+    border-bottom: #207d74 solid 0.01em;
     width: 100%;
     border-radius: 1em 1em 0 0 ;
 }
@@ -135,6 +159,7 @@ main{
     padding: 1em; 
     text-align: left;
 }
+
 
 .project .skill{    
     top:0;
@@ -216,6 +241,13 @@ main{
 @font-face {
   font-family: 'Montserrat';
   src: url('polices/Roboto/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('polices/Geologica/Geologica-Light.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
