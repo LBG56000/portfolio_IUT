@@ -33,7 +33,6 @@ body{
     font-family: 'Geologica';
     padding: 0;
     margin: 0;
-    background-color: #ddedec;
 }
 
 footer {
@@ -52,7 +51,6 @@ a {
     margin-top: 1em;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     justify-items: center;
     align-items: center;
     padding: 1em;
@@ -118,10 +116,22 @@ a {
     fill: #207d74;
 }
 
+@media (max-width: 750px) {
+    main {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+    }
+}
+
+@media (min-width: 751px) {
+    main {
+        margin-left: 20em;
+        margin-right: 20em;   
+    }
+}
+
 main{
-    margin-top: 5em;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin-top: 5em; 
 }
 
 .timelineSVG {
@@ -246,6 +256,10 @@ main{
 
 .competenceTitle p {
     margin-left: 0.2em;
+}
+
+section { 
+    background-color: white;
 }
 
 @font-face {
