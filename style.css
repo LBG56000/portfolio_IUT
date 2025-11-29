@@ -181,6 +181,20 @@ section {
     margin: 1em;
 }
 
+/* ------------------ PROJECT ------------------- */
+
+.projectStep {
+    display: inline-block;
+    border-bottom: #147068 solid 5px;
+    font-size: 1.5em;
+    border-bottom-width: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.projectStepText {
+    font-size: 1.2em;
+}
+
 
 /* ------------------ Contact ------------------- */
 .contact {
