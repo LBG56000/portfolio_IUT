@@ -1,6 +1,7 @@
+/* ------------------ HEADER ------------------- */
+
 header{
     background-color: #147068;
-    margin-bottom: 20em;
     padding: 0.1em;
     position: fixed;
     top: 0;
@@ -9,14 +10,15 @@ header{
     box-shadow: 0px 2px 5px 0px #207d74;
 }
 
+/* Suppression du margin-bottom: 20em car cela casse la mise en page */
+
+
+/* ------------------ MENU ------------------- */
+
 .menu{
     display: flex;
     justify-content: space-evenly;
-}
-
-
-.menu a:hover {
-    text-decoration: underline;
+    flex-wrap: wrap; /* AJOUT → responsive */
 }
 
 .menu a {
@@ -24,6 +26,13 @@ header{
     color: white;
     font-size: 1.3em;
 }
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------ GLOBAL ------------------- */
 
 h1, h2, h3 {
     font-family: 'Montserrat';
@@ -35,8 +44,8 @@ body{
     margin: 0;
 }
 
-footer {
-    margin: 0.5em;
+main{
+    margin-top: 6em; /* AJOUT → espace sous le header fixe */
 }
 
 a {
@@ -47,115 +56,76 @@ a {
     font-weight: bold;
 }
 
+section { 
+    background-color: white;
+}
+
+
+/* ------------------ ME SECTION ------------------- */
+
 #me {
     margin-top: 1em;
     display: flex;
     flex-direction: row;
-    justify-items: center;
     align-items: center;
     padding: 1em;
+    flex-wrap: wrap; /* AJOUT */
 }
 
-#me h1{
+#me h1 {
     margin: 2em;
 }
 
 #me img {
     border-radius: 10em;
+    max-width: 200px; /* AJOUT → évite l’image trop grande */
+    width: 100%;
+}
+
+
+/* ------------------ PROJECTS ------------------- */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* MODIFICATION responsive */
+    gap: 1.5em; /* AJOUT */
 }
 
 .projects figure{
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .projects figure:hover{
     transform: scale(0.9);
 }
 
-#myImage{
-    background-color: #207d74;
-    border-radius: 15em;
-    padding: 1em;
-    box-shadow: 0px 0px 12px #207d74;
-}
-
-.projects {
-    display: flex;
-    position: relative;
-    width: auto;
-    margin: auto;
-    overflow: auto;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
-    justify-self: center;
-}
-
-.projects figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    align-self: center;
-}
-
 .projects img {
     border-radius: 1em;
+    width: 100%; /* AJOUT */
+    height: auto; /* AJOUT */
 }
 
-#bac{
-    fill: #94f7ee;
-}
+/* suppress backgroundProjects (inutile) */
+/* .backgroundProjects { } SUPPRIMÉ */
 
-#iut{
-    fill: #40e0d0;
-}
-#aprenticeship{
-    fill: #207d74;
-}
 
-@media (max-width: 750px) {
-    main {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
-    }
-}
-
-@media (min-width: 751px) {
-    main {
-        margin-left: 20em;
-        margin-right: 20em;   
-    }
-}
-
-main{
-    margin-top: 5em; 
-}
-
-.timelineSVG {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.projectsCard{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
+/* ------------------ PROJECT CARD ------------------- */
 
 .project {
     border: #207d74 3px solid;
     border-radius: 1em;
     font-size: 1.2em;
-    margin: 0.5em;
     text-align: center;
     cursor: pointer;
     display: grid;
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: auto auto;
     transition: transform 0.3s ease-in-out;
     background-color: #207d7442;
+    min-width: 250px; /* AJOUT */
 }
 
 .project:hover{
@@ -164,49 +134,45 @@ main{
 }
 
 .project div img {
-    border-bottom: #207d74 solid 0.01em;
     width: 100%;
-    border-radius: 1em 1em 0 0 ;
+    border-bottom: #207d74 solid 0.01em;
+    border-radius: 1em 1em 0 0;
 }
 
 .project .text {
     font-weight: bold;
-    padding: 1em; 
+    padding: 1em;
     text-align: left;
 }
 
-
 .project .skill{    
-    top:0;
-    left: 0;
     margin: 0.5em;
 }
 
-.contact {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;  
-    margin: 0.1em;
-}
 
-.contact p {
-    margin-left: 0.5em;
-}
+/* ------------------ LEGEND & COMPETENCE ------------------- */
 
 .skill {
-    align-self: start;
     display: flex;
-    flex-direction: row;    
-    justify-items: center;
     align-items: center;
     margin-right: 1em;
-    grid-column: 1;
 }
 
 .skill p {
     margin-left: 0.2em;
 }
 
+.legend, .competence {
+    display: flex;
+    flex-wrap: wrap; /* AJOUT */
+}
+
+.competence > *{
+    margin: 1em;
+}
+
+
+/* ------------------ COLORS ------------------- */
 
 .color-red{ background-color: #b60804;}
 .color-orange{ background-color: #eb8d50;}
@@ -215,52 +181,24 @@ main{
 .color-blue{ background-color: #05215f;}
 .color-black{ background-color: #0e0f0f;}
 
-.legend {
+
+/* ------------------ TIMELINE & LOGOS ------------------- */
+
+.timelineSVG {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
 }
 
-.competence{
-    display: flex;
-    flex-direction: row;
-}
-
-.competence > *{
-    margin: 1em;
-}
-
-.projectStep {
-    font-size: 1.8em;
-}
-
-.projectStepText{
-    margin-left: 0.5em;
-}
-
-#logoPACT{
-    margin-top: 2em;
-}
-
-#logoSQL{
+#logoPACT, #logoSQL {
     margin-top: 1em;
-
 }
 
+#bac { fill: #94f7ee; }
+#iut { fill: #40e0d0; }
+#aprenticeship { fill: #207d74; }
 
-.competenceTitle {
-    display: flex;
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-}
 
-.competenceTitle p {
-    margin-left: 0.2em;
-}
-
-section { 
-    background-color: white;
-}
+/* ------------------ FONTS ------------------- */
 
 @font-face {
   font-family: 'Montserrat-italic';
@@ -281,4 +219,40 @@ section {
   src: url('polices/Geologica/Geologica-Light.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
+}
+
+
+/* ------------------ MEDIA QUERIES ------------------- */
+
+/* GRAND ÉCRAN */
+@media (min-width: 1200px) {
+    main > * {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+/* TABLETTES */
+@media (max-width: 900px) {
+    #me {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* SMARTPHONES */
+@media (max-width: 600px) {
+    header {
+        padding-bottom: 0.5em;
+    }
+
+    .menu a {
+        font-size: 1.1em;
+        margin: 0.2em;
+    }
+
+    #me h1 {
+        margin: 1em;
+        font-size: 1.4em;
+    }
 }
