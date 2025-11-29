@@ -175,14 +175,14 @@ section {
 }
 
 
-/* ------------------ COLORS ------------------- */
-
-.color-red{ background-color: #b60804;}
-.color-orange{ background-color: #eb8d50;}
-.color-yellow{ background-color: #efbb13;}
-.color-green{ background-color: #8cc74f;}   
-.color-blue{ background-color: #05215f;}
-.color-black{ background-color: #0e0f0f;}
+/* ------------------ Contact ------------------- */
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    gap: 0.5em;
+}
 
 
 /* ------------------ TIMELINE & LOGOS ------------------- */
