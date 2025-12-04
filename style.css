@@ -248,29 +248,16 @@ section {
 
 /* ------------------ MEDIA QUERIES ------------------- */
 
-/* GRAND ÉCRAN */
+/* Grand écran */
 @media (min-width: 1200px) {
-    main > * {
+    main {
         margin-left: 15%;
         margin-right: 15%;
     }
 }
 
-/* TABLETTES */
+/* Tablettes */
 @media (max-width: 900px) {
-    #me {
-        justify-content: center;
-        text-align: center;
-    }
-
-    main > * {
-        margin-left: 1.5em;
-        margin-right: 1.5em;
-    }
-}
-
-/* SMARTPHONES */
-@media (min-width: 600px) {
     main {
         margin-left: 1.5em;
         margin-right: 1.5em;
@@ -279,18 +266,17 @@ section {
     .projectsCard {
         grid-template-columns: repeat(2,1fr);
     }
+}
 
-    header {
-        padding-bottom: 0.5em;
+/* Smartphones */
+@media (max-width: 600px) {
+    .projectsCard {
+        grid-template-columns: repeat(2,1fr);
     }
 
-    .menu a {
-        font-size: 1.1em;
-        margin: 0.2em;
-    }
-
-    #me h1 {
-        margin: 1em;
-        font-size: 1.4em;
+    main {
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
 }
+
