@@ -270,9 +270,9 @@ section {
 }
 
 /* SMARTPHONES */
-@media (max-width: 600px) {
+@media (min-width: 600px) {
     main {
-        margin-left: 10em;
+        margin-left: 1.5em;
         margin-right: 1.5em;
     }
 
