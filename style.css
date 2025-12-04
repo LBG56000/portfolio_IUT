@@ -271,8 +271,8 @@ section {
 
 /* SMARTPHONES */
 @media (max-width: 600px) {
-    main > * {
-        margin-left: 1.5em;
+    main {
+        margin-left: 10em;
         margin-right: 1.5em;
     }
 
