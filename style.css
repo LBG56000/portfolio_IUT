@@ -10,9 +10,6 @@ header{
     box-shadow: 0px 2px 5px 0px #207d74;
 }
 
-/* Suppression du margin-bottom: 20em car cela casse la mise en page */
-
-
 /* ------------------ MENU ------------------- */
 
 .menu {
