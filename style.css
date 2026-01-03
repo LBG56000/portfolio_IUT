@@ -17,6 +17,16 @@ footer {
     padding: 1em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 1em;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: end;
+    gap: 0.5em;
 }
 
 /* ------------------ MENU ------------------- */
